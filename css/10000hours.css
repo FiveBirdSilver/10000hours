@@ -1,0 +1,294 @@
+@font-face {
+    font-family: 'OTEnjoystoriesBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format('woff2'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+body {
+    background-color: rebeccapurple;
+}
+
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+}
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 130px;
+}
+.title_img1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.title_img1 img {
+    width: 50%;
+    height: auto;
+}
+.title_img2 {
+    position: absolute;
+}
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+    .intro_saying {
+    font-family: 'OTEnjoystoriesBA';
+    font-size: 36px;
+    color:yellow;
+    margin-bottom: 50px;
+    }
+    .explain {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    }
+    .quotes {
+    padding-top: 20px;
+    position: relative;
+    }
+    .explain p {
+    position: absolute;
+    color: white;
+    font-family: 'GmarketSansMedium';
+    line-height: 1.7;
+    }
+    .explain span {
+    font-family: 'GmarketSansBold';
+    font-size: 20px;
+    }
+.inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 80px;
+    line-height: 3.5;
+}
+    .inputs p {
+        color: white;
+        font-size: 22px;
+        font-family: 'GmarketSansMedium';
+    }
+    .inputs input {
+        width: 230px;
+        height: 50px;
+        padding-left: 15px;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        font-family: 'GmarketSansMedium';
+    }
+    .inputs input::placeholder {
+        color: darkgrey;
+    }
+.start {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+    .btn_wrap button {
+        padding: 10px 40px;
+        border: none;
+        border-radius: 30px;
+        background-color: yellow;
+        color: rebeccapurple;
+        font-size: 20px;
+        font-family: 'GmarketSansBold';
+        cursor: pointer;
+        word-break: keep-all;
+    }
+
+.result_loading {
+    display:none;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+    .img_wrap {
+        width: 100px;
+        height: 100px;
+    }
+
+    .img_wrap img {
+        width: 100%;
+        height: auto;
+        animation: rotate 1s infinite linear;
+    }
+.result {
+    display:none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+    .result_wrap {
+        font-size: 20px;
+        font-family: 'GmarketSansMedium';
+        text-align: center;
+        color: white;
+        line-height: 3;
+        margin-bottom: 80px;
+    }
+    .result_wrap span {
+        font-size: 30px;
+        font-family: 'GmarketSansBold';
+        color: white;
+    }
+    .result_btn {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 70px;
+    }
+    .go button {
+        padding: 10px 40px;
+        margin-right: 20px;
+        border: none;
+        border-radius: 30px;
+        background-color: yellow;
+        color: rebeccapurple;
+        font-size: 20px;
+        font-family: 'GmarketSansBold';
+        cursor: pointer;
+
+    }
+    .share button {
+        padding: 10px 40px;
+        border: none;
+        border-radius: 30px;
+        background-color:white;
+        color: rebeccapurple;
+        font-size: 20px;
+        font-family: 'GmarketSansBold';
+        cursor: pointer;
+    
+    }
+#modal {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.modal_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 600px;
+    background-color: #FFF;
+    border-radius: 20px;
+}
+.modal_desc {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    font-family: 'OTEnjoystoriesBA';
+    color:rebeccapurple;
+}
+.modal_wrap h1 {
+    font-size:80px;
+    
+}
+.modal_wrap h3 {
+    font-size: 24px;
+}
+.modal_img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.modal_btn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.close_btn {
+    padding: 10px 40px;
+    border: none;
+    border-radius: 30px;
+    background-color:yellow;
+    color: rebeccapurple;
+    box-shadow:  1px 1px 1px gray;
+    font-size: 20px;
+    font-family: 'GmarketSansBold';
+    cursor: pointer;
+}
+.modal_wrap p {
+    text-align: center;
+    font-size: 14px;
+    font-family: 'GmarketSansMedium';
+    color:dimgray;
+}
+
+.copyright_wrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+}
+.logo_img {
+    margin-bottom: 20px;
+}
+.copyright_wrap p {
+    text-align: center;
+    font-size: 10px;
+    font-family: 'GmarketSansMedium';
+    color: white;
+    line-height: 1.5;
+}
+.copyright_wrap span {
+    text-align: center;
+    font-size: 10px;
+    font-family: 'GmarketSansMedium';
+    color: yellow;
+    font-weight: bold;
+    line-height: 1.5;
+}
